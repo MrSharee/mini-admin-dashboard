@@ -17,18 +17,16 @@ function Dashboard() {
   return (
     <>
       <div className="flex flex-col justify-between bg-background h-full w-5/6  p-7 gap-9">
-        <div className="">
-          <span
-            className="flex flex-col justify-center items-end
+        <span
+          className="flex flex-col justify-center items-end
           gap-2.5"
-          >
-            <h2 className="text-text text-2xl">خوش آمدید، هادی شرعی 👋</h2>
-            <p className="text-xs text-muted">
-              . به داشبورد مدیریت خوش آمدید❤️ ، در اینجا می‌توانید وضعیت کلی
-              سیستم را مشاهده کنید
-            </p>
-          </span>
-        </div>
+        >
+          <h2 className="text-text text-2xl">خوش آمدید، هادی شرعی 👋</h2>
+          <p className="text-xs text-muted">
+            . به داشبورد مدیریت خوش آمدید❤️ ، در اینجا می‌توانید وضعیت کلی سیستم
+            را مشاهده کنید
+          </p>
+        </span>
         <div className="flex flex-row justify-between items-center text-white ">
           <StatCard
             title="کاربران"
