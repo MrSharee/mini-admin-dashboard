@@ -1,0 +1,36 @@
+@import "tailwindcss";
+body {
+  font-family: "Vazirmatn", sans-serif;
+}
+@theme {
+  --color-background: #0f111a;
+  --color-surface: #171b28;
+  --color-sidebar: #151824;
+  --color-border: #272c3a;
+
+  --color-primary: #9b5cff;
+  --color-primary-light: #b47cff;
+  --color-primary-dark: #3a246b;
+
+  --color-text: #f5f5f7;
+  --color-muted: #a5a9b8;
+
+  --color-success: #22c997;
+  --color-info: #3b82f6;
+  --color-danger: #ef4444;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url(./assets/Vazir.woff2) format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url(./assets/Vazir-Medium.woff2) format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url(./assets/Vazir-Bold.woff2) format("woff2");
+  font-weight: 700;
+}
