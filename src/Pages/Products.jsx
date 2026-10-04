@@ -4,7 +4,16 @@ import useFetch from "../hooks/UseFetch";
 import usePagination from "../hooks/UsePagination";
 import Product from "../Components/Products/Product";
 import PageNum from "../Components/PageNum";
+import Modal from "../Components/Modal/Modal";
+import { useState } from "react";
 function Products() {
+  const [modal, setModal] = useState(false);
+  const openModal = () => {
+    setModal(true);
+  };
+  const closeModal = () => {
+    setModal(false);
+  };
   const { data } = useFetch(Api.products);
   const products = data.products || [];
   const { currentItems, currentPage, totalPages, setPage } = usePagination(
@@ -14,12 +23,15 @@ function Products() {
 
   return (
     <>
-      <div className="flex flex-col justify-start bg-background h-full w-5/6  p-7 gap-9">
+      <div className="flex flex-col justify-start bg-background h-full w-5/6 z-0  p-7 gap-9">
         <span
           className="flex flex-row justify-between items-center
         "
         >
-          <button className=" flex flex-row bg-primary justify-center items-center text-text text-xs gap-2 px-3.5 rounded-md py-2.5 hover:bg-primary-dark transition cursor-pointer duration-300">
+          <button
+            onClick={openModal}
+            className=" flex flex-row bg-primary justify-center items-center text-text text-xs gap-2 px-3.5 rounded-md py-2.5 hover:bg-primary-dark transition cursor-pointer duration-300"
+          >
             <h5>افزودن محصول </h5>
             <FaPlus className="" />
           </button>
@@ -65,6 +77,8 @@ function Products() {
           setPage={setPage}
         />
       </div>
+      {modal && <Modal onClose={closeModal} />}
+      {/* <Modal /> */}
     </>
   );
 }

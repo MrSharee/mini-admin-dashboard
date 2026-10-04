@@ -19,6 +19,25 @@ body {
   --color-info: #3b82f6;
   --color-danger: #ef4444;
 }
+
+@layer components {
+  .input-style {
+    @apply bg-background border border-border rounded-lg focus:outline-primary-dark h-10 w-52.5 text-text text-end text-xs
+           placeholder:text-end
+           placeholder:text-[#74798A]
+           placeholder:text-[10px]
+           placeholder:font-extralight
+           pr-3;
+  }
+  .desc-input {
+    @apply bg-background border border-border rounded-lg focus:outline-primary-dark h-27.5 w-full text-text text-end text-xs
+           p-5
+           placeholder:text-[#74798A]
+           placeholder:text-[10px]
+           placeholder:font-extralight
+           pr-3;
+  }
+}
 @font-face {
   font-family: "Vazirmatn";
   src: url(./assets/Vazir.woff2) format("woff2");
