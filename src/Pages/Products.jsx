@@ -1,4 +1,5 @@
 import { FaPlus } from "react-icons/fa6";
+import { useEffect, useState } from "react";
 import Api from "../api/Api";
 import useFetch from "../hooks/UseFetch";
 import usePagination from "../hooks/UsePagination";
@@ -8,6 +9,7 @@ import Modal from "../Components/Modal/Modal";
 import { useState } from "react";
 function Products() {
   const [modal, setModal] = useState(false);
+  // const [products, setProducts] = useState([]); از تبدیل  api به useState
   const openModal = () => {
     setModal(true);
   };
